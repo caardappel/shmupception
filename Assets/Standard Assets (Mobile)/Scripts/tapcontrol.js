@@ -276,7 +276,7 @@ function Update ()
 					}
 					else if ( touchCount == 1 )
 					{
-						var deltaSinceDown = touch.position - fingerDownPosition[ 0 ];
+						//var deltaSinceDown = touch.position - fingerDownPosition[ 0 ];
 						
 						// Either the finger is held down long enough to count
 						// as a move or it is lifted, which is also a move. 
