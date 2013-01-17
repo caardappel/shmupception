@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class Gun : MonoBehaviour 
 {
+	public GameObject effect;
 	public Shot[] pattern; 
 	public Transform origin;
 	public bool firing = false;
@@ -16,7 +17,7 @@ public class Gun : MonoBehaviour
 		// Load magazine
 		for (int i = 0; i < pattern.Length; i++)
 		{
-			magazine.Add(Shot.Create(pattern[i]));
+			magazine.Add(Shot.Create(pattern[i], this));
 			magazine[magazine.Count-1].gameObject.SetActive(false);
 		}
 	}
@@ -36,7 +37,7 @@ public class Gun : MonoBehaviour
 				Shot s = magazine.Find(x => x.name == pattern[shot].name && x.gameObject.activeInHierarchy == false);
 				if (s == null)
 				{
-					s = Shot.Create(pattern[shot]);
+					s = Shot.Create(pattern[shot], this);
 					magazine.Add(s);
 				}
 				

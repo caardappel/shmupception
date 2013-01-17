@@ -7,7 +7,7 @@ public class Shot : MonoBehaviour
 {
 	public existenceEvent OnExistence;
 	
-	public GameObject effect;
+	public GameObject effectOverride;
 	public float delay;
 	public Vector3 velocity;
 	
@@ -60,15 +60,22 @@ public class Shot : MonoBehaviour
 		velocity = source.velocity;
 	}
 	
-	static public Shot Create(Shot source)
+	static public Shot Create(Shot source, Gun gun)
 	{
 		GameObject go = null;
-		if (source.effect != null)
-			go = (GameObject)Instantiate(source.effect);
+		
+		GameObject effect = gun.effect;
+		if (effect == null)
+			effect = source.effectOverride;
+		
+		if (effect != null)
+			go = (GameObject)Instantiate(effect);
 		else
 			go = new GameObject("Shot Delayer");
+		
 		Shot shot = go.AddComponent<Shot>();
 		shot.Clone(source);
+		
 		return shot;
 	}
 }

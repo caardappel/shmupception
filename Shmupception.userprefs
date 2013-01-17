@@ -1,24 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Chris Aardappel\Documents\Shmupception\Assets\SimpleParticlePack\Scripts\ParticleTester.cs">
-    <Files>
-      <File FileName="c:\Users\Chris Aardappel\Documents\Shmupception\Assets\SimpleParticlePack\Scripts\ParticleTester.cs" Line="155" Column="4" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="SimpleParticlePack" expanded="True">
-                <Node name="Scripts" expanded="True">
-                  <Node name="ParticleTester.cs" selected="True" />
-                </Node>
+              <Node name="Shmupception" expanded="True">
+                <Node name="Scripts" expanded="True" />
               </Node>
             </Node>
           </Node>
           <Node name="Assembly-CSharp-Editor" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Editor" expanded="True" />
+              <Node name="Editor" expanded="True">
+                <Node name="EnemyInspector.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
           <Node name="Assembly-CSharp-firstpass" expanded="True">
